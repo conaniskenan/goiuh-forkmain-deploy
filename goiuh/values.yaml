@@ -2,35 +2,35 @@ test:
   fullnameOverride: test
   image:
     repository: ghcr.io/conaniskenan/test
-    tag: main
+    tag: c596c92
   imagePullSecrets:
-  - name: goiuh-docker
+    - name: goiuh-docker
   ingress:
     annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /$2$3
     className: nginx
     enabled: true
     hosts:
-    - host: goiuh-tnz30e7fc.forkmain.cloud
-      paths:
-      - path: /()()(.*)
-        pathType: ImplementationSpecific
-      - path: /(api/|api$)(.*)
-        pathType: ImplementationSpecific
+      - host: goiuh-tnz30e7fc.forkmain.cloud
+        paths:
+          - path: /()()(.*)
+            pathType: ImplementationSpecific
+          - path: /(api/|api$)(.*)
+            pathType: ImplementationSpecific
   nocalhost:
     command:
       debug:
-      - yarn
-      - install
-      - '&&'
-      - yarn
-      - dev
+        - yarn
+        - install
+        - '&&'
+        - yarn
+        - dev
       run:
-      - yarn
-      - install
-      - '&&'
-      - yarn
-      - dev
+        - yarn
+        - install
+        - '&&'
+        - yarn
+        - dev
     configPath: conf/nocalhost.yaml
     env: null
     gitURL: https://github.com/conaniskenan/test.git
@@ -39,8 +39,8 @@ test:
     language: javascript
     patches: null
     persistentVolumeDirs:
-    - capacity: 20Gi
-      path: /home/nocalhost-dev
+      - capacity: 20Gi
+        path: /home/nocalhost-dev
     remoteDebugPort: 9009
   service:
     port: 3000
